@@ -1,17 +1,11 @@
 import { setGlobalOptions } from "firebase-functions";
-import { onCall } from "firebase-functions/https";
-import * as logger from "firebase-functions/logger";
+import { pingFn } from './ping';
+import { generateImageFn } from './generate-image';
+import { initializeApp } from 'firebase-admin/app';
 
 setGlobalOptions({ maxInstances: 10 });
 
-export const ping = onCall(
-  {
-    enforceAppCheck: true,
-    consumeAppCheckToken: true
-  },
-  () => {
-  logger.info("Hello logs!", {structuredData: true});
-  return {
-    success: true
-  };
-});
+initializeApp();
+
+export const ping = pingFn;
+export const generateImage = generateImageFn;
