@@ -1,5 +1,15 @@
 {
   "cSpell.words": [
+    "firestore",
+    "genai",
     "imagen"
-  ]
+  ],
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.angular": true,
+    "**/.firebase": true,
+    "**/coverage": true,
+    "**/.cache": true
+  }
 }

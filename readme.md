@@ -1,5 +1,5 @@
 ```shell
-firebase emulators:start --only functions,auth,firestore
+firebase emulators:start --only functions,auth,firestore,storage
 ```
 
 ```shell
